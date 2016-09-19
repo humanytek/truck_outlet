@@ -4,12 +4,12 @@
         <record model="ir.ui.view" id="sale_order_truck_outlet">
             <field name="name">sale.order.truck.outlet</field>
             <field name="model">sale.order</field>
-            <field name="inherit_id" ref="sale.sale_order_form"/>
+            <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <button name="view_picking" position="before">
+                <button name="action_view_delivery" position="before">
                     <button type="object" class="oe_highlight"
                         name="truck_outlet" string="Trucks outlet"
-                        attrs="{'invisible': ['|', ('shipped','=',True), ('state','!=', 'approved')]}"/>
+                        attrs="{'invisible': ['|', ('shipped','=',True), ('state','!=', 'manual')]}"/>
                 </button>
                 <notebook position="inside">
                     <page string="Trucks outlet">

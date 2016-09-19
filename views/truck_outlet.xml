@@ -2,13 +2,13 @@
 <openerp>
     <data>
         <record id="seq_type_truck_outlet" model="ir.sequence.type">
-          <field name="name">REG Type</field>
-          <field name="code">reg_code</field>
+          <field name="name">TO REG</field>
+          <field name="code">reg_code_to</field>
         </record>
         <record id="seq_truck_outlet" model="ir.sequence">
             <field name="name">reg</field>
-            <field name="code">reg_code</field>
-            <field name="prefix">TR</field>
+            <field name="code">reg_code_to</field>
+            <field name="prefix">TO</field>
             <field name="padding">5</field>
         </record>
 
@@ -19,7 +19,7 @@
                 <form string="Truck Outlet Form">
                     <field name="contract_state" invisible="1"/>
                     <header>
-                        <button name="fun_unload" type="object" string="Unload" states="unloading" class="oe_highlight"/>
+                        <button name="fun_load" type="object" string="Load" states="loading" class="oe_highlight"/>
                         <button name="fun_transfer" type="object" string="Transfer" class="oe_highlight"
                             attrs="{'invisible': ['|',
                                                         ('contract_state', 'in', ['except_picking']),
@@ -28,7 +28,7 @@
                                                             ('stock_picking_id', '!=', False)]}"/>
                         <button name="fun_ship" type="object" string="Finalize"
                             attrs="{'invisible': ['|',
-                                                        ('contract_state', 'in', ['except_picking']),
+                                                        ('pending', '=', 0),
                                                         ('state', 'not in', ['done'])]}"/>
                         <field name="state" widget="statusbar" readonly="1"/>
                     </header>
@@ -44,7 +44,6 @@
                                 <group col="3">
                                     <field name="contract_id" required="1" attrs="{'readonly':[('state', 'not in', ['analysis'])]}"/>
                                     <field name="contract_type" nolabel="1" class="oe_inline"/>
-                                    <field name="auxiliary_contract" readonly="1"/>
                                 </group>
                                 <group>
                                     <field name="partner_id"/>
@@ -72,7 +71,6 @@
                         </group>
                         <group>
                             <field name="product_id"/>
-                            <field name="location_id"/>
                         </group>
                         <button type="object" string="Update" states="analysis" class="oe_highlight"/>
                         <group col="3">
@@ -159,7 +157,7 @@
                 <search>
                     <filter name="analysis" string="Analysis" domain="[('state', '=', 'analysis')]"/>
                     <filter name="weight_input" string="Weight input" domain="[('state', '=', 'weight_input')]"/>
-                    <filter name="unloading" string="Unloading" domain="[('state', '=', 'unloading')]"/>
+                    <filter name="loading" string="Loading" domain="[('state', '=', 'loading')]"/>
                     <filter name="weight_output" string="Weight output" domain="[('state', '=', 'weight_output')]"/>
                     <filter name="done" string="Done" domain="[('state', '=', 'done')]"/>
                     <separator/>
