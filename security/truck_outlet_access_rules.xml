@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="res.groups" id="group_truck_outlet">
+            <field name="name">Truck/Outlet</field>
+        </record>
+    </data>
+</openerp>
