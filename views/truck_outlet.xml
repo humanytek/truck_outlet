@@ -26,10 +26,6 @@
                                                         '|',
                                                             ('state', 'not in', ['done']),
                                                             ('stock_picking_id', '!=', False)]}"/>
-                        <button name="fun_ship" type="object" string="Finalize"
-                            attrs="{'invisible': ['|',
-                                                        ('pending', '=', 0),
-                                                        ('state', 'not in', ['done'])]}"/>
                         <field name="state" widget="statusbar" readonly="1"/>
                     </header>
                     <sheet>
@@ -94,11 +90,11 @@
                         <group>
                             <group col="1">
                                 <group col="3">
-                                    <field name="input_kilos" attrs="{'readonly':[('state', 'not in', ['weight_input'])], 'required':[('state', 'in', ['weight_input'])]}"/>
+                                    <field name="input_kilos" readonly="1" attrs="{'required':[('state', 'in', ['weight_input'])]}"/>
                                     <button type="object" string="Update" states="weight_input" class="oe_highlight"/>
                                 </group>
                                 <group col="3">
-                                    <field name="output_kilos" attrs="{'readonly':[('state', 'not in', ['weight_output'])], 'required':[('state', 'in', ['weight_output'])]}"/>
+                                    <field name="output_kilos" readonly="1" attrs="{'required':[('state', 'in', ['weight_output'])]}"/>
                                     <button type="object" string="Update" states="weight_output" class="oe_highlight"/>
                                 </group>
                                 <group>
@@ -147,6 +143,36 @@
                 <field name="state" position="attributes">
                     <attribute name="clickable">1</attribute>
                 </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="truck_outlet_form_view_permissions_weights">
+            <field name="name">truck.outlet.form</field>
+            <field name="model">truck.outlet</field>
+            <field name="inherit_id" ref="truck_outlet_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_truck_outlet_weights')])]" />
+            <field name="arch" type="xml">
+                <field name="input_kilos" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+                <field name="output_kilos" position="attributes">
+                    <attribute name="readonly">0</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="truck_outlet_form_view_permissions_ship">
+            <field name="name">truck.outlet.form</field>
+            <field name="model">truck.outlet</field>
+            <field name="inherit_id" ref="truck_outlet_form_view"/>
+            <field name="groups_id" eval="[(6,0, [ref('group_truck_outlet_ship')])]" />
+            <field name="arch" type="xml">
+                <button name="fun_transfer" position="after">
+                    <button name="fun_ship" type="object" string="Finalize"
+                            attrs="{'invisible': ['|',
+                                ('contract_state', 'in', ['except_picking']),
+                                ('state', 'not in', ['done'])]}"/>
+                    </button>
             </field>
         </record>
 
