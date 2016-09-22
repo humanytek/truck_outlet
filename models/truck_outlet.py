@@ -13,7 +13,7 @@ class TruckOutlet(models.Model):
         ('done', 'Done'),
     ], default='analysis')
 
-    _defaults = {'name': lambda obj, cr, uid, context: obj.pool.get('ir.sequence').get(cr, uid, 'reg_code'), }
+    _defaults = {'name': lambda obj, cr, uid, context: obj.pool.get('ir.sequence').get(cr, uid, 'reg_code_to'), }
 
     @api.one
     @api.depends('input_kilos', 'output_kilos')
