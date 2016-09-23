@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-23 16:48+0000\n"
-"PO-Revision-Date: 2016-09-23 16:48+0000\n"
+"POT-Creation-Date: 2016-09-23 18:00+0000\n"
+"PO-Revision-Date: 2016-09-23 18:00+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,26 @@ msgid "Analysis"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,break_rate:0
+msgid "Break rate"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,broken_kilos:0
+msgid "Broken kilos"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,car_plates:0
+msgid "Car plates"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,clean_kilos:0
+msgid "Clean kilos"
+msgstr ""
+
+#. module: truck_outlet
 #: field:truck.outlet,contract_id:0
 msgid "Contract id"
 msgstr ""
@@ -39,8 +59,38 @@ msgid "Contract type"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: truck_outlet
 #: field:truck.outlet,partner_id:0
 msgid "Customer"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,damage_rate:0
+msgid "Damage rate"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,damaged_kilos:0
+msgid "Damaged kilos"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,deducted_kilos:0
+msgid "Deducted kilos"
 msgstr ""
 
 #. module: truck_outlet
@@ -50,14 +100,51 @@ msgid "Delivered"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,density:0
+msgid "Density"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_search_view
 #: selection:truck.outlet,state:0
 msgid "Done"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,driver:0
+msgid "Driver"
+msgstr ""
+
+#. module: truck_outlet
+#: model:ir.model,name:truck_outlet.model_truck_outlet
+msgid "Email Thread"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view_permissions_ship
 msgid "Finalize"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,contract_state:0
+msgid "Gives the status of the quotation or sales order.              \n"
+"The exception status is automatically set when a cancel operation occurs               in the invoice validation (Invoice Exception) or in the picking list process (Shipping Exception).\n"
+"The 'Waiting Schedule' status is set when the invoice is confirmed               but waiting for the scheduler to run on the order date."
+msgstr ""
+
+#. module: truck_outlet
+#: view:truck.outlet:truck_outlet.truck_outlet_search_view
+msgid "Group By"
 msgstr ""
 
 #. module: truck_outlet
@@ -67,8 +154,73 @@ msgid "Hired"
 msgstr ""
 
 #. module: truck_outlet
+#: help:truck.outlet,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,humid_kilos:0
+msgid "Humid kilos"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,humidity_rate:0
+msgid "Humidity rate"
+msgstr ""
+
+#. module: truck_outlet
 #: field:truck.outlet,id:0
 msgid "ID"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,impure_kilos:0
+msgid "Impure kilos"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,impurity_rate:0
+msgid "Impurity rate"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,location_id:0
+msgid "Input Location"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,input_kilos:0
+msgid "Input kilos"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,write_date:0
+msgid "Last Updated on"
 msgstr ""
 
 #. module: truck_outlet
@@ -83,9 +235,39 @@ msgid "Loading"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,name:0
+msgid "Name"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,output_kilos:0
+msgid "Output kilos"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 #: field:truck.outlet,pending:0
 msgid "Pending"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,product_id:0
+msgid "Product id"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,raw_kilos:0
+msgid "Raw kilos"
 msgstr ""
 
 #. module: truck_outlet
@@ -105,13 +287,38 @@ msgid "Status"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,stock_picking_id:0
+msgid "Stock picking id"
+msgstr ""
+
+#. module: truck_outlet
 #: field:truck.outlet,street:0
 msgid "Street"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,temperature:0
+msgid "Temperature"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,ticket:0
+msgid "Ticket"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 msgid "Transfer"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,transgenic:0
+msgid "Transgenic"
 msgstr ""
 
 #. module: truck_outlet
@@ -157,8 +364,23 @@ msgid "Trucks outlet"
 msgstr ""
 
 #. module: truck_outlet
+#: field:truck.outlet,message_unread:0
+msgid "Unread Messages"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 msgid "Update"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,website_message_ids:0
+msgid "Website Messages"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,website_message_ids:0
+msgid "Website communication history"
 msgstr ""
 
 #. module: truck_outlet

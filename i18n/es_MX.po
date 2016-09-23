@@ -17,7 +17,7 @@ msgstr ""
 
 #. module: truck_outlet
 #: model:ir.actions.act_window,help:truck_outlet.truck_outlet_list_action
-msgid "<p class=\"oe_view_nocontent_create\">Crea la pimer salida de camiones\n"
+msgid "<p class=\"oe_view_nocontent_create\">Create the first truck outlet\n"
 "                </p>\n"
 "            "
 msgstr ""
@@ -29,6 +29,26 @@ msgid "Analysis"
 msgstr "Analisis"
 
 #. module: truck_outlet
+#: field:truck.outlet,break_rate:0
+msgid "Break rate"
+msgstr "Quebrado"
+
+#. module: truck_outlet
+#: field:truck.outlet,broken_kilos:0
+msgid "Broken kilos"
+msgstr "Kilos quebrados"
+
+#. module: truck_outlet
+#: field:truck.outlet,car_plates:0
+msgid "Car plates"
+msgstr "Placas"
+
+#. module: truck_outlet
+#: field:truck.outlet,clean_kilos:0
+msgid "Clean kilos"
+msgstr "Kilos limpios"
+
+#. module: truck_outlet
 #: field:truck.outlet,contract_id:0
 msgid "Contract id"
 msgstr "Contrato"
@@ -36,12 +56,42 @@ msgstr "Contrato"
 #. module: truck_outlet
 #: field:truck.outlet,contract_type:0
 msgid "Contract type"
-msgstr "Tipo de contracto"
+msgstr "Tipo de contrato"
+
+#. module: truck_outlet
+#: field:truck.outlet,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,create_date:0
+msgid "Created on"
+msgstr ""
 
 #. module: truck_outlet
 #: field:truck.outlet,partner_id:0
 msgid "Customer"
 msgstr "Cliente"
+
+#. module: truck_outlet
+#: field:truck.outlet,damage_rate:0
+msgid "Damage rate"
+msgstr "Daño"
+
+#. module: truck_outlet
+#: field:truck.outlet,damaged_kilos:0
+msgid "Damaged kilos"
+msgstr "Kilos dañados"
+
+#. module: truck_outlet
+#: help:truck.outlet,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,deducted_kilos:0
+msgid "Deducted kilos"
+msgstr "Kilos deducidos"
 
 #. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
@@ -50,16 +100,52 @@ msgid "Delivered"
 msgstr "Entregado"
 
 #. module: truck_outlet
+#: field:truck.outlet,density:0
+msgid "Density"
+msgstr "Densidad"
+
+#. module: truck_outlet
+#: field:truck.outlet,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_search_view
 #: selection:truck.outlet,state:0
 msgid "Done"
 msgstr "Hecho"
 
 #. module: truck_outlet
+#: field:truck.outlet,driver:0
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: truck_outlet
+#: model:ir.model,name:truck_outlet.model_truck_outlet
+msgid "Email Thread"
+msgstr ""
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view_permissions_ship
 msgid "Finalize"
 msgstr "Finalizar"
 
+#. module: truck_outlet
+#: field:truck.outlet,message_follower_ids:0
+msgid "Followers"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,contract_state:0
+msgid "Gives the status of the quotation or sales order.              \n"
+"The exception status is automatically set when a cancel operation occurs               in the invoice validation (Invoice Exception) or in the picking list process (Shipping Exception).\n"
+"The 'Waiting Schedule' status is set when the invoice is confirmed               but waiting for the scheduler to run on the order date."
+msgstr ""
+
+#. module: truck_outlet
+#: view:truck.outlet:truck_outlet.truck_outlet_search_view
+msgid "Group By"
+msgstr ""
 
 #. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
@@ -68,9 +154,74 @@ msgid "Hired"
 msgstr "Contratado"
 
 #. module: truck_outlet
+#: help:truck.outlet,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,humid_kilos:0
+msgid "Humid kilos"
+msgstr "Kilos humedos"
+
+#. module: truck_outlet
+#: field:truck.outlet,humidity_rate:0
+msgid "Humidity rate"
+msgstr "Humedad"
+
+#. module: truck_outlet
 #: field:truck.outlet,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,impure_kilos:0
+msgid "Impure kilos"
+msgstr "Kilos impuros"
+
+#. module: truck_outlet
+#: field:truck.outlet,impurity_rate:0
+msgid "Impurity rate"
+msgstr "Impureza"
+
+#. module: truck_outlet
+#: field:truck.outlet,location_id:0
+msgid "Input Location"
+msgstr "Ubicacion de entrada"
+
+#. module: truck_outlet
+#: field:truck.outlet,input_kilos:0
+msgid "Input kilos"
+msgstr "Kilos de entrada"
+
+#. module: truck_outlet
+#: field:truck.outlet,message_is_follower:0
+msgid "Is a Follower"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,message_last_post:0
+msgid "Last Message Date"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,write_date:0
+msgid "Last Updated on"
+msgstr ""
 
 #. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
@@ -84,10 +235,40 @@ msgid "Loading"
 msgstr "Cargando"
 
 #. module: truck_outlet
+#: field:truck.outlet,message_ids:0
+msgid "Messages"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,message_ids:0
+msgid "Messages and communication history"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,name:0
+msgid "Name"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,output_kilos:0
+msgid "Output kilos"
+msgstr "Kilos de salida"
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 #: field:truck.outlet,pending:0
 msgid "Pending"
 msgstr "Pendiente"
+
+#. module: truck_outlet
+#: field:truck.outlet,product_id:0
+msgid "Product id"
+msgstr "Producto"
+
+#. module: truck_outlet
+#: field:truck.outlet,raw_kilos:0
+msgid "Raw kilos"
+msgstr "Kilos neto"
 
 #. module: truck_outlet
 #: model:ir.model,name:truck_outlet.model_sale_order
@@ -106,14 +287,39 @@ msgid "Status"
 msgstr "Estado"
 
 #. module: truck_outlet
+#: field:truck.outlet,stock_picking_id:0
+msgid "Stock picking id"
+msgstr "Movimiento de almacen"
+
+#. module: truck_outlet
 #: field:truck.outlet,street:0
 msgid "Street"
 msgstr "Domicilio"
 
 #. module: truck_outlet
+#: field:truck.outlet,message_summary:0
+msgid "Summary"
+msgstr ""
+
+#. module: truck_outlet
+#: field:truck.outlet,temperature:0
+msgid "Temperature"
+msgstr "Temperatura"
+
+#. module: truck_outlet
+#: field:truck.outlet,ticket:0
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 msgid "Transfer"
 msgstr "Transferir"
+
+#. module: truck_outlet
+#: field:truck.outlet,transgenic:0
+msgid "Transgenic"
+msgstr "Transgenico"
 
 #. module: truck_outlet
 #: model:ir.actions.act_window,name:truck_outlet.truck_outlet_list_action
@@ -130,7 +336,7 @@ msgstr "Formulario de salida de camion"
 #. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_tree_view
 msgid "Truck Outlet Tree"
-msgstr "Lista de salida de camiones"
+msgstr "Lista de salidas de camion"
 
 #. module: truck_outlet
 #: field:sale.order,truck_outlet_ids:0
@@ -140,27 +346,42 @@ msgstr "Salidas de camiones"
 #. module: truck_outlet
 #: model:res.groups,name:truck_outlet.group_truck_outlet
 msgid "Truck/Outlet"
-msgstr "Camiones/Salida"
+msgstr "Camion/Salida"
 
 #. module: truck_outlet
 #: model:res.groups,name:truck_outlet.group_truck_outlet_ship
 msgid "Truck/Outlet/Ship"
-msgstr "Camiones/Salida/Finalizar"
+msgstr "Camion/Salida/Finalizar"
 
 #. module: truck_outlet
 #: model:res.groups,name:truck_outlet.group_truck_outlet_weights
 msgid "Truck/Outlet/Weights"
-msgstr "Camiones/Salida/Pesos"
+msgstr "Camion/Salida/Pesos"
 
 #. module: truck_outlet
 #: view:sale.order:truck_outlet.sale_order_truck_outlet
 msgid "Trucks outlet"
-msgstr "Salidas de camiones"
+msgstr "Salida de camiones"
+
+#. module: truck_outlet
+#: field:truck.outlet,message_unread:0
+msgid "Unread Messages"
+msgstr ""
 
 #. module: truck_outlet
 #: view:truck.outlet:truck_outlet.truck_outlet_form_view
 msgid "Update"
 msgstr "Actualizar"
+
+#. module: truck_outlet
+#: field:truck.outlet,website_message_ids:0
+msgid "Website Messages"
+msgstr ""
+
+#. module: truck_outlet
+#: help:truck.outlet,website_message_ids:0
+msgid "Website communication history"
+msgstr ""
 
 #. module: truck_outlet
 #: selection:truck.outlet,state:0
