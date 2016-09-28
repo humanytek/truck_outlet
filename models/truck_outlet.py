@@ -16,6 +16,15 @@ class TruckOutlet(models.Model):
     _defaults = {'name': lambda obj, cr, uid, context: obj.pool.get('ir.sequence').get(cr, uid, 'reg_code_to'), }
 
     @api.one
+    @api.depends('contract_id')
+    def _compute_product_id(self):
+        product_id = False
+        for line in self.contract_id.order_line:
+            product_id = line.product_id.id
+            break
+        self.product_id = product_id
+
+    @api.one
     @api.depends('input_kilos', 'output_kilos')
     def _compute_raw_kilos(self):
         self.raw_kilos = self.output_kilos -self.input_kilos
